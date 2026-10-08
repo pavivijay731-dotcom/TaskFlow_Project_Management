@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>TaskFlow - Project Management</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>TaskFlow</h1>
+        <p>Simple Project Management Tool</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Manage Your Projects Easily</h2>
+            <p>Create projects, organize tasks and track progress.</p>
+
+            <div class="buttons">
+                <a href="/accounts/login/" class="btn">Login</a>
+                <a href="/accounts/register/" class="btn secondary">Register</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="card">
+                <h3>📁 Projects</h3>
+                <p>Create and manage multiple projects.</p>
+            </div>
+
+            <div class="card">
+                <h3>✅ Tasks</h3>
+                <p>Create tasks and track their status.</p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Progress</h3>
+                <p>Keep your work organized and monitor progress.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+
+    <title>TaskFlow - Dashboard</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>TaskFlow</h1>
+    <p>Project Management Dashboard</p>
+</header>
+
+<main>
+
+    <section class="hero">
+
+        <h2>Welcome to TaskFlow 👋</h2>
+
+        <p>
+            Create projects, manage tasks and track your progress.
+        </p>
+
+        <button class="btn" onclick="showProjectForm()">
+            + Create Project
+        </button>
+
+    </section>
+
+
+    <section id="projectForm" class="hero" style="display: none; margin-top: 25px;">
+
+        <h2>Create New Project</h2>
+
+        <br>
+
+        <input
+            type="text"
+            id="projectName"
+            placeholder="Project Name"
+            required
+        >
+
+        <br><br>
+
+        <textarea
+            id="projectDescription"
+            placeholder="Project Description"
+            rows="4"
+            style="width: 80%; padding: 12px;"
+        ></textarea>
+
+        <br><br>
+
+        <button class="btn" onclick="createProject()">
+            Create Project
+        </button>
+
+        <button
+            class="btn secondary"
+            onclick="hideProjectForm()"
+        >
+            Cancel
+        </button>
+
+        <p id="projectMessage"></p>
+
+    </section>
+
+
+    <section style="margin-top: 35px;">
+
+        <h2>My Projects 📁</h2>
+
+        <div id="projectList" class="features">
+            <p>Loading projects...</p>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="{% static 'js/dashboard.js' %}"></script>
+
+</body>
+</html>
